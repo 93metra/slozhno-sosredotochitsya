@@ -2,4 +2,320 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  color: var(--main-color);
+  line-height: 1.3;
+  background-color: var(--bg-color);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  /* align-items: center; */
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+  position: relative;
+  min-block-size: 100vh;
+  margin-block-end: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+}
+
+.header__rec-decoration {
+  color: var(--accent-color);
+  line-height: 1.3em;
+  position: absolute;
+  right: 19px;
+  top: 11px;
+}
+
+.header__rec-decoration::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  margin-inline-start: 10px;
+  margin-block-end: 2px;
+  background-color: var(--accent-color);
+  display: inline-block;
+  box-shadow: 0 0 3px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  float: inline-end;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  line-height: 1;
+  padding: 3px 13px;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid currentColor;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.82;
+  align-self: center;
+}
+
+.corner-decoration::before {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.corner-decoration::after {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
+.header__paragraph-wrapper {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__paragraph {
+  /* margin: 55px 0; */
+  inline-size: clamp(22.1875rem, 21.5911rem + 2.5445vw, 22.8125rem);
+}
+
+.title-decor {
+  color: var(--heading-color);
+  background-color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* content */
+
+.content {
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.content .content__section:not(:last-child) {
+  margin-block-end: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+}
+
+/* .content__section-why {
+  margin-block-end: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+} */
+
+.content__title {
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 1.3;
+  margin-block-end: 20px;
+}
+
+.card__title {
+  margin-block-end: 10px;
+}
+
+.content__section article:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.content__link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.content__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* .content__section-what {
+  margin-block-end: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+} */
+
+/* .content__section-how {
+  margin-block-end: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+} */
+
+.content__section-subtitle {
+  margin-block-end: 20px;
+}
+
+.content__section-how .card__title {
+  font-weight: 400;
+}
+
+/* gallery */
+
+.gallery__title {
+  margin-block-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.images__list-item {
+  font-size: 0;
+}
+
+.images__list-item img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.images__list {
+  display: grid;
+  gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+  min-block-size: 100vh;
+  position: relative;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 0.82;
+}
+
+/* @media queries */
+
+@media (width >= 500px) {
+  .images__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .image-1 {
+    grid-column: span 2;
+  }
+  
+  .image-2 {
+    grid-row: span 2;
+  }
+  
+  .image-3 {
+    grid-row: span 2;
+  }
+  
+  .image-5 {
+    grid-column: span 2;
+  }
+}
+
+@media (width >= 768px) {
+  /* .header {
+    padding: 20px;
+  } */
+
+  .header__title {
+    margin-inline-start: -20px;
+  }
+
+  .corner-decoration::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .corner-decoration::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .header__rec-decoration {
+    right: 29px;
+    top: 21px;
+  }
+
+  .content__section-why, .content__section-how {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .what__title {
+    inline-size: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem);
+  }
+}
+
+@media (width > 800px) {
+  .content__section-why, .content__section-how {
+    gap: 10px;
+  }
+}
+
+@media (width > 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__paragraph {
+    inline-size: clamp(22.8125rem, -0.8125rem + 49.2188vw, 30.6875rem);
+  }
+
+  .header__theme-menu {
+    align-self: initial;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: initial;
+  }
+
+  .what-section__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
