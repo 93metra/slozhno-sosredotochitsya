@@ -19,16 +19,16 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-  --bg-color: #FFF1F7;
-  --title-color: #FFC2E6;
-  --title-shadow-color: #FF0070;
-  --main-color: #353430;
-  --accent-color: #FF8DCB;
-  --btn-color: #353430;
-  --content-title-color: #353430;
-  --corner-decoration-color: #353430;
-  --heading-color: #353430;
-  --link-shadow-color: #FF8DCB;    
+   --bg-color: #FFF1F7;
+   --title-color: #FFC2E6;
+   --title-shadow-color: #FF0070;
+   --main-color: #353430;
+   --accent-color: #FF8DCB;
+   --btn-color: #353430;
+   --content-title-color: #353430;
+   --corner-decoration-color: #353430;
+   --heading-color: #353430;
+   --link-shadow-color: #FF8DCB;    
   }
 
   .page {
