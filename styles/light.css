@@ -28,8 +28,8 @@
    --content-title-color: #353430;
    --corner-decoration-color: #353430;
    --heading-color: #353430;
-   --link-shadow-color: #FF8DCB;    
-  }
+   --link-shadow-color: #FF8DCB;
+}
 
   .page {
     background-image: url(../images/cover-image-light.png);
